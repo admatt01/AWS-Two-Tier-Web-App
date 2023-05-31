@@ -10,7 +10,7 @@
 - Web servers connect to the RDS Db instance via backend private subnets with security groups (10.0.0.0/16>MySQL) for secure connectivity to the RDS Db.
 
 Notes:
-- Probably should be broken down to include a variables.tf file for best practises. Variables file could be used to change AZ's, db storage settings, etc.
+- Probably should be broken down to include a [variables].tfvars file for best practises. Variables file could be used to change AZ's, db storage settings, etc.
 
 - Creates resources in the new AWS Melbourne region (ap-southeast-4) so care should be taken to adjust accordingly for your region.
 
