@@ -1,4 +1,3 @@
-# Brainboard auto-generated file.
 
 resource "aws_vpc" "web-app-vpc" {
   instance_tenancy = "default"
