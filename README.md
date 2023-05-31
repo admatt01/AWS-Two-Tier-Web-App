@@ -6,10 +6,11 @@
 - Creates the route tables.
 - Creates the frontend public subnets and security groups (http/SSH) across two avaialbility zones and places 2 x t3.micro Ubuntu instances in the zones, as Web Servers.
 - Creates an ALB target group consisting of the two Web servers with an HTTP forwarder and health check.
-- Web servers in turn connect to the RDS Db instance via backend private subnet with security groups (10.0.0.0/16>MySQL) for secure connectivity to the RDS Db.
+- Creates an RDS Db instance with a small storage using MySQL in one Availability Zone.
+- Web servers connect to the RDS Db instance via backend private subnets with security groups (10.0.0.0/16>MySQL) for secure connectivity to the RDS Db.
 
 Notes:
-- Probably should be broken down to include a variables.tf file for best practises.
+- Probably should be broken down to include a variables.tf file for best practises. Variables file could be used to change AZ's, db storage settings, etc.
 
 - Creates resources in the new AWS Melbourne region (ap-southeast-4) so care should be taken to adjust accordingly for your region.
 
