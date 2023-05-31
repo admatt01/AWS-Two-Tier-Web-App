@@ -222,23 +222,6 @@ resource "aws_lb_listener" "lblisten" {
   }
 }
 
-resource "aws_instance" "Webserver1" {
-  subnet_id                   = aws_subnet.public1.id
-  instance_type               = "t3.micro"
-  availability_zone           = "ap-southeast-4a"
-  associate_public_ip_address = true
-  ami                         = "ami-0f809b5fd09dbf10a"
-  key_name                    = "web-servers"
-
-  tags = {
-    Name = "Webserver-1"
-  }
-
-  vpc_security_group_ids = [
-    aws_security_group.publicsg.id,
-  ]
-}
-
 resource "aws_instance" "Webserver2" {
   subnet_id                   = aws_subnet.public2.id
   instance_type               = "t3.micro"
