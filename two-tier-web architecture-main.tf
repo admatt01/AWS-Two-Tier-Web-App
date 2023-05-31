@@ -1,6 +1,6 @@
 
 resource "aws_vpc" "web-app-vpc" {
-  instance_tenancy = "default"
+  instance_tenancy = "web-infra"
   cidr_block       = "10.0.0.0/16"
 
   tags = {
