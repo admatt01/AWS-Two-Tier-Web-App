@@ -1,6 +1,5 @@
 # AWS Two Tier Web App
- AWS Two tier web app with RDS Db
-This is mostly taken from various tutorials showing how to use Terraform. 
+ AWS Two tier web app with RDS Db. This is mostly taken from various tutorials showing how to use Terraform. 
 
 - Creates the VPC containing the infrastructure.
 - Creates an Internet Gateway (IGW) and connects it to an Application Load Balancer (ALB).
